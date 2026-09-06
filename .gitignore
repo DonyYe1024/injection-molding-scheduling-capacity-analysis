@@ -1,0 +1,18 @@
+# 源 Excel 数据文件（含真实订单/库存数据，不纳入仓库）
+*.xlsx
+*.xlsm
+*.xls
+
+# 历史备份
+index_backup_*.html
+*_backup_*.json
+
+# 临时/中间产物
+_dump*.py
+_dump*.txt
+_full_dump.txt
+*.log
+_probe.txt
+/tmp/
+.DS_Store
+Thumbs.db

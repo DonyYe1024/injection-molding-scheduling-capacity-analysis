@@ -1,0 +1,3 @@
+2026/09/02 -1修改如下：
+
+改善1，【meta-gauge】模块从【meta-widgets】中移至【header】中，【meta-widgets】高度缩小

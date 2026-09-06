@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="okqYg5kW8i2VYbAungRS2y">
+<head data-page-node-id="sVpBRNKC7f8c8hOumUwJEa">
+<meta charset="UTF-8" data-page-node-id="JZarwhsBKkGGtstv0vmEOr" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="XNlc6vH3ZcftLHBR7crV6V" />
+<title>项目说明 · 惠州注塑部产能分析看板</title>
+<style>
+  :root {
+    --bg: #f6f8fb; --panel: #ffffff; --border: #e3e9f0; --text: #24303e;
+    --muted: #6b7a8d; --primary: #0f4c81; --primary-2: #1a6fc4; --teal: #18b8a8;
+    --amber: #f5a623; --code-bg: #f0f3f7; --code-text: #c7254e;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", Arial, sans-serif;
+    font-size: 14.5px; line-height: 1.75; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 28px 28px 80px; }
+  header.hero {
+    background: linear-gradient(120deg, #0f4c81 0%, #1a6fc4 55%, #18b8a8 100%);
+    color: #fff; border-radius: 14px; padding: 30px 32px; box-shadow: 0 6px 24px rgba(15,76,129,.18);
+  }
+  header.hero h1 { margin: 0 0 8px; font-size: 26px; font-weight: 600; letter-spacing: .5px; }
+  header.hero .sub { opacity: .94; font-size: 14px; }
+  header.hero .badges { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .badge { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.4);
+    padding: 3px 12px; border-radius: 20px; font-size: 12.5px; }
+  nav.toc {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 24px; margin: 22px 0; box-shadow: 0 1px 4px rgba(15,76,129,.06);
+  }
+  nav.toc h2 { margin: 0 0 10px; font-size: 15px; color: var(--primary); }
+  nav.toc ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 40px; }
+  nav.toc a { color: var(--primary-2); text-decoration: none; }
+  nav.toc a:hover { text-decoration: underline; }
+  section.card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+    padding: 26px 30px; margin: 22px 0; box-shadow: 0 1px 4px rgba(15,76,129,.06);
+  }
+  h2.sec { margin: 0 0 14px; font-size: 19px; font-weight: 600; color: var(--primary);
+    padding-left: 12px; border-left: 4px solid var(--teal); }
+  h3 { font-size: 15.5px; margin: 20px 0 8px; color: var(--primary-2); }
+  p { margin: 8px 0; }
+  code {
+    background: var(--code-bg); color: var(--code-text); border-radius: 5px;
+    padding: 1.5px 6px; font-family: Consolas, "Courier New", monospace; font-size: 13px;
+  }
+  pre {
+    background: #f4f6f9; border: 1px solid var(--border); border-radius: 8px;
+    padding: 14px 16px; overflow: auto; font-family: Consolas, "Courier New", monospace;
+    font-size: 12.8px; line-height: 1.6; color: #33404f;
+  }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--border); padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #eef2f6; font-weight: 600; }
+  td code { font-size: 12.5px; }
+  .tag { display: inline-block; background: #e8f1fb; color: var(--primary-2);
+    border-radius: 5px; padding: 0 7px; font-size: 12px; margin-right: 4px; }
+  .tag.warn { background: #fff4e0; color: #8a5a00; }
+  .tag.danger { background: #fdecea; color: #8f2b1d; }
+  .callout { border-left: 4px solid var(--amber); background: #fffaf0;
+    padding: 10px 14px; border-radius: 6px; margin: 12px 0; font-size: 13.5px; }
+  .callout.danger { border-left-color: #e5533c; background: #fdf3f1; }
+  footer { text-align: center; color: var(--muted); font-size: 12.5px; margin-top: 20px; }
+  @media (max-width: 720px) { nav.toc ol { columns: 1; } }
+</style>
+</head>
+<body data-page-node-id="torZ305E5GRXv5BDh5YBXw">
+<div class="wrap" data-page-node-id="Xxl3nDFxIhxDD2zYCnZy1R">
+
+<header class="hero" data-page-node-id="sM263XCfC463rX0CiBSulG">
+  <h1 data-page-node-id="wqPEjmOU6VStFvCAyWMnln">惠州注塑部产能分析看板 · 项目说明</h1>
+  <div class="sub" data-page-node-id="4ECE7onkpNDdSbvBZkRso2">单文件 HTML 注塑产能分析看板 —— 复现、维护、增删模块的完整指引</div>
+  <div class="badges" data-page-node-id="qRRj9hvGS7b8B7odQcG32f">
+    <span class="badge" data-page-node-id="IGGTEGlZGFdeeEtVaoL2Sv">单文件 HTML</span>
+    <span class="badge" data-page-node-id="9dbeIc7Cqr0gpDKtY7ibMv">ECharts 5.5.0 (CDN)</span>
+    <span class="badge" data-page-node-id="ohT8PbNA71a4DbqNeY4M8S">SheetJS 0.20.3 (CDN)</span>
+    <span class="badge" data-page-node-id="tvX1szi2RHc7Quh42FIcqP">内嵌数据 + 上传重算</span>
+  </div>
+</header>
+
+<nav class="toc" data-page-node-id="UfKh5f9Gi596zWYl2sz6Ti">
+  <h2 data-page-node-id="ID8oqwJwGzf6pGgfiyfbEI">目录</h2>
+  <ol data-page-node-id="TD6i6FQKegGZAyaHOfNu91">
+    <li data-page-node-id="SELtf2OLIIJP9zPJwdrvKK"><a href="#s1" data-page-node-id="ybZ3TcLJWcR1sb4EcoR9jS">项目概览</a></li>
+    <li data-page-node-id="zQHmmQy0FLVgbVNzTR2VzI"><a href="#s2" data-page-node-id="WcWIEAwoAvMBopcw9ctdYw">文件结构</a></li>
+    <li data-page-node-id="gE9Ip4jOZSdD3DM6huHcIf"><a href="#s3" data-page-node-id="b2IieEwX8eXk8xIDK1Qvim">内置数据说明</a></li>
+    <li data-page-node-id="FC1U08RSBbqtqH65UysqDn"><a href="#s4" data-page-node-id="bWdfiVg6Z4ATtLRCIaqLIW">HTML 模块清单</a></li>
+    <li data-page-node-id="HCfUdanQgdT1787UWjmEbv"><a href="#s5" data-page-node-id="aTZ1k0A8NXIHwk8IyohEHR">业务规则说明（核心）</a></li>
+    <li data-page-node-id="Auti59O94hgyHhGMSZCqjt"><a href="#s6" data-page-node-id="lrElA6Q244xrhicCEhC2xA">核心函数索引</a></li>
+    <li data-page-node-id="NUpLEuqgy3THteSefMbhKX"><a href="#s7" data-page-node-id="20sgxucRvLbhCxAbHUM54i">如何增删模块</a></li>
+    <li data-page-node-id="WjXiIO8gFVD5YQMRKRcEZO"><a href="#s8" data-page-node-id="yUL0m7mF6Q8oBtRSqKG6mq">维护与回滚</a></li>
+  </ol>
+</nav>
+
+<!-- ===================== 1 ===================== -->
+<section class="card" id="s1" data-page-node-id="MpbSbJWJ3aVY8wGKU4xeOA">
+  <h2 class="sec" data-page-node-id="OViWzBoivnaCeArErRC6o6">1. 项目概览</h2>
+  <table data-page-node-id="pfk8m4h3xfn3J33Cl3E4Nl">
+    <tr data-page-node-id="WO31E7yjW2kEMu6vRWhuC6"><th style="width:150px" data-page-node-id="zEzG6xT0TAW4hNI1oFh3KY">项目名称</th><td data-page-node-id="EQuRnM0DLadIlm1ParzGTy">惠州注塑部产能分析看板</td></tr>
+    <tr data-page-node-id="RYqCxnSm4TyfB6ZqxGLK9q"><th data-page-node-id="wXArRQDqCywRGsEJT1y66T">用途</th><td data-page-node-id="elUYXUYOmcyPhevf33zNA5">注塑厂产能分析看板：展示机台产能、模具产能（品种 / GAP）、实单+预算待生产前十占比、原料需求推算、外壳库存水位（饼图）、入库汇总、年度汇总，并支持上传 Excel 实时重算。</td></tr>
+    <tr data-page-node-id="juA6AvP0DvRJk5HRx93xNM"><th data-page-node-id="XVA3dmR7EuTddHEo5CokCL">技术栈</th><td data-page-node-id="9BHJqEjpMS6QBWThA7rq4S">单文件 <code data-page-node-id="Y1JIZohBNYSeawHR2jFAhr">index.html</code>（原生 HTML + CSS + 原生 JS IIFE）；图表库 <code data-page-node-id="iJPeEncFvo7MAX8uS6r2ql">ECharts 5.5.0</code>；表格解析库 <code data-page-node-id="6CXaLD67Y9z4h9DaPhXOPZ">SheetJS (xlsx) 0.20.3</code>，均通过 CDN 加载（无网时优雅降级提示）。</td></tr>
+    <tr data-page-node-id="nwx7ikQFAfz10r8iMOqxGB"><th data-page-node-id="dXlAC6XHzI5ahhsAYS1z8z">运行方式</th><td data-page-node-id="mS80JWyOiSMqOXbZDGjpij">双击 <code data-page-node-id="E26T5jo7ME1sLdaGbHUeCW">index.html</code> 用浏览器打开即可；或本地起静态服务器预览（如 <code data-page-node-id="ggMMrfJQZdtV8iG52PBeek">python -m http.server</code> 后访问）。首次加载需联网拉取 CDN 依赖。</td></tr>
+    <tr data-page-node-id="hT1av0W00IHOQiz0J4eRG2"><th data-page-node-id="XX6zEMyGSyzGYIwFgTDxM8">数据来源</th><td data-page-node-id="jxH5u7dpQDB3xBicrW2J6S">内置数据由源文件《最新排程产能分析-公式模板-最新.xlsm》经 Python 脚本抽取聚合注入；也可在页面上传《工单备料明细 / 最新主排程 / 最新预算》等 Excel 重算覆盖。</td></tr>
+  </table>
+</section>
+
+<!-- ===================== 2 ===================== -->
+<section class="card" id="s2" data-page-node-id="MfpU9b58Cq7Udgols4SRh3">
+  <h2 class="sec" data-page-node-id="XvKg2EGkxjC6MQyVQDq7uS">2. 文件结构</h2>
+  <p data-page-node-id="udEMO0QFys0NcHrXiqyj3c">整个项目核心是 <code data-page-node-id="7zMZnwwHKaKIv9UfFRuHYn">index.html</code> 一个文件，内部结构如下（按出现顺序）：</p>
+  <table data-page-node-id="rkhNyCU0pA8kMOLfkITKH8">
+    <tr data-page-node-id="yBBHYb8FhLBHR7v23LL9ui"><th style="width:220px" data-page-node-id="5Ft2xOBB8HIWgI1NgNVs9V">区域</th><th data-page-node-id="lreKkdB7Cg7PFOh7IwyVtK">内容与作用</th></tr>
+    <tr data-page-node-id="TLPRrCZ3GfZupRtqGqXSVp"><td data-page-node-id="nvhmQPs8TKt72a3oMGBY8s"><code data-page-node-id="PC123WDoau40vitIctHtMe">&lt;head&gt; · 两个 CDN script</code></td><td data-page-node-id="NE8nLmCjfg7De27p6AJJNb">引入 ECharts（图表）与 SheetJS（上传 Excel 解析），各自带 <code data-page-node-id="ue12JYkxdwl0CGNCp5LooN">onerror</code> 标记加载失败，供页面顶部横幅降级提示。</td></tr>
+    <tr data-page-node-id="D1cHU6O8p4Q1g2jDfH1jNP"><td data-page-node-id="t5Ze2D7GKfuN9jfAyVhuUC"><code data-page-node-id="GgknJIQ0PWLBC6mcuZ3fnr">&lt;style&gt;</code></td><td data-page-node-id="jvrws1zN7ePiGaXGu8y0AM">全部 CSS：配色变量、布局、卡片/表格/月历/仪表盘/滑动条/下拉等样式。全页样式集中于此，无外部样式表。</td></tr>
+    <tr data-page-node-id="0EeSyDrEXXj6UdwBRfRoPs"><td data-page-node-id="PHz2LUWpHUMHCVKCLMRdDX">第一个 <code data-page-node-id="eT07SXdaa1mRqPhndZ5pC2">&lt;script&gt;</code>（内嵌数据）</td><td data-page-node-id="xAVYyH6tS1Lu39eWAaDwZL">声明 4 个常量 <code data-page-node-id="B1WmhGlzHUif1R9COfRWPp">EMBEDDED_DATA / EMBEDDED_MAPPINGS / EMBEDDED_ANALYSIS / EMBEDDED_GAP</code>（详见第 3 节）。</td></tr>
+    <tr data-page-node-id="b8nhMMZsfXuWzgVTlLIpqE"><td data-page-node-id="1yYlDXfjoNcGy0ySn8atjH"><code data-page-node-id="lGuIPCrgNyjWA0IuDirFdb">&lt;body&gt;</code> 各 section</td><td data-page-node-id="EZKXfJRsm9o9r2onCVHPBw">页面骨架：顶部 header（含月历/仪表盘）、上传工具条、KPI 卡片、机台/模具/原料/库存/库存水位饼图/入库/年度汇总等各模块容器（详见第 4 节）。</td></tr>
+    <tr data-page-node-id="bfbwTuAYOdv5EdYw8z6Mj0"><td data-page-node-id="gInIRJUm6Cuo1R2ZNcM0dh">第二个 <code data-page-node-id="N7JF4EUE9GWTn4V9xLcL8v">&lt;script&gt;</code>（逻辑 IIFE）</td><td data-page-node-id="QmngZZ6u59hVWPHs6O6Nbi">全部业务逻辑：工具函数、周/日期/农历算法、映射表、全局状态、SheetJS 读取、各表解析器、数据组装、渲染函数、上传重算、事件绑定、启动 <code data-page-node-id="UD7Q3wQ7pxhuhQxiDoAlFX">init()</code>。对外仅暴露 <code data-page-node-id="GZVQj58MM1YnnOqt0S48nc">window.__injectionDebug</code>。</td></tr>
+  </table>
+  <div class="callout" data-page-node-id="tNxDpwVHx5PrgOZOqKehHX">本项目是「数据 + 逻辑 + 视图」三合一单文件。修改任何部分时务必保持「内嵌数据常量」与「逻辑 IIFE」的 <code data-page-node-id="aPeGBiEyjYewL3W8ue7Ldq">const</code>/函数名/元素 id 不变（外部 QA 脚本会按名称引用）。</div>
+</section>
+
+<!-- ===================== 3 ===================== -->
+<section class="card" id="s3" data-page-node-id="RMNeoSvWVA4ljDBov1Bbb2">
+  <h2 class="sec" data-page-node-id="mpaQvk5DsIEsxE4lA6TkAb">3. 内置数据说明</h2>
+  <p data-page-node-id="0qtYHqqZG5GNeEWCqZPUTK">4 个常量均由 Python 抽取脚本生成并注入第一个 <code data-page-node-id="7q1rAt8E0mRfVFr8J8EW2O">&lt;script&gt;</code> 块。它们共同构成看板的「离线初始状态」。</p>
+
+  <h3 data-page-node-id="CMo7bfbxwLhIzd2IfIaFBK">3.1 EMBEDDED_DATA</h3>
+  <p data-page-node-id="Y3qUbr82cUbwVXa6BrzvrE">看板主数据，字段结构：</p>
+  <pre data-page-node-id="hE1dv7pRwf95478wdMfXya">{
+  meta: { generatedAt, source, machineGroups },   // 生成时间、源文件名、机台组列表
+  machine: {                                       // 机台产能（周轴 + 各组）
+    weeks: ["2026WK21", ...],
+    groups: { "400T-550T": { label, capTag, real:[...], capLo:[...], capHi:[...] }, ... }
+  },
+  mold: { weeks:[...], items:[{mold, weeks, hours, qty}] }   // 模具品种数据
+}</pre>
+  <p data-page-node-id="bWpkxWfdPmQFB3VdbAxrYz">对应抽取脚本：<code data-page-node-id="DPyxaMgrEvrnQDiJGb8HgT">_extract_data.py</code>。</p>
+
+  <h3 data-page-node-id="sCu7ZBJe0BBKbxHTNNyMpu">3.2 EMBEDDED_MAPPINGS</h3>
+  <p data-page-node-id="zP1bHTHmkzasaWLjpyI6Ts">三大映射字典（key 为料号/订单号字符串）：</p>
+  <pre data-page-node-id="aS550l5EQWsFDqhVrkDNGS">{
+  capacity: { "2090000023": { p:"SK-575外壳", m:"400T-550T", c:"1*1", t:"75", w:"305" }, ... },
+              // p=品种, m=机台组, c=穴数, t=周期秒, w=毛重克
+  bom:      { 料号: { c:"原料代码", n:"原料名称" }, ... },
+  lineDate: { 订单号: "YYYY-MM-DD", ... },
+  report:   {}   // 预留占位，暂不参与计算
+}</pre>
+  <p data-page-node-id="XuDNa83KqNwV2rQgQUJ76x">对应抽取脚本：<code data-page-node-id="xgg8BEf789xrdFmyrUsPMi">_extract_mappings.py</code> + <code data-page-node-id="1RsfOvX6BYGfGABCVdSanq">_patch_mappings.py</code>（补丁/补充映射）。</p>
+
+  <h3 data-page-node-id="mZf4iJSZi1cL3bm1nHBj2F">3.3 EMBEDDED_ANALYSIS</h3>
+  <p data-page-node-id="PEFyPb9jhSzIDc8nHMr3LF">「分析2 / 分析3」结果（机台实单/预算/6天/7天产能 + 前十占比）：</p>
+  <pre data-page-node-id="lVI11sDUe2IcBYQLed6AIl">{
+  machine: { weeks:[...], groups:{ "400T-550T":{real,cap6,cap7,budget}, ... } },
+  top10:   { shell:[{name,pcs,amount,realQty,budgetQty}], acc:[{name,pcs,amount,realQty,budgetQty}] },
+  detailDate: "2026-08-28"   // 原始数据1 更新日期
+}</pre>
+  <p data-page-node-id="eq3y3Oq3aGURCCvcoxPrDC">对应抽取脚本：<code data-page-node-id="T0joKMZmdtqzYZFWHnAnFS">_extract_analysis.py</code>。</p>
+
+  <h3 data-page-node-id="qZXBpmwbLIz1I4W3782LJs">3.4 EMBEDDED_GAP</h3>
+  <p data-page-node-id="Q5B0g1ixOCvaSUAHkxqbFi">GAP 模具产能 + 原料需求 + 外壳库存（明细 / 水位饼图 / 入库汇总 / 年度汇总）数据：</p>
+  <pre data-page-node-id="2yhPoDeZoUfehr2psWsOyY">{
+  gap: {
+    weeks: [...], workdays:[6,6,...],   // 周轴 + 各周工作天数
+    molds: [{ mold:"DH001S", cycle:55, sets:3, real:[...], budget:[...] }, ...]
+  },
+  material: { weeks:[...], items:[{usage,desc,code,name,weekly:[...]}] },  // usage=使用产品(A列)
+  stock: [ {code,name,spec}, ... ], stockTotal: 数值,   // 明细来自「原始数据9」塑胶外壳类去重
+  stockWaterLevel: { total: 130861, items:[{name,qty,amount,ratio}, ...] },  // 注塑外壳库存水位 5 档
+  inbound: { dates:[...30日...], rows:[{group,label,values:[...]}, ...7行] },  // 入库汇总
+  annual:  { months:[...12月...], rows:[{group,label,values:[...]}, ...8行] }  // 年度汇总
+}</pre>
+  <p data-page-node-id="ILLVGWoRCNcVtPGughRVFE">对应抽取脚本：<code data-page-node-id="CMTIQ291GZKvR10VBXc0FD">_extract_gap.py</code>。</p>
+
+  <h3 data-page-node-id="glWxT4epScPNHTmPDvb6y9">3.5 如何重新抽取生成</h3>
+  <ol data-page-node-id="OOzGAP7IMsfE00b0mRQ4Gp">
+    <li data-page-node-id="xyDYE6TGCIrNCWBG9r3gV6">准备源 Excel《最新排程产能分析-公式模板-最新.xlsm》等原始文件。</li>
+    <li data-page-node-id="7vFjZUOHIY9gNWXLGsJHdg">在项目上级目录运行 <code data-page-node-id="D8lAROpdzHdwKWoZVxW8hU">_extract_data.py</code>、<code data-page-node-id="YfGklWjgKU7IzSCIsD1krd">_extract_mappings.py</code>、<code data-page-node-id="qiVrfmVZwuf9kM7wnEVbft">_extract_analysis.py</code>、<code data-page-node-id="dU4Cu7qxCqbliAFiqaxEg3">_extract_gap.py</code>，再运行 <code data-page-node-id="zVjKXslfsNmJxyXpXjCOAn">_patch_mappings.py</code>。</li>
+    <li data-page-node-id="Fyzu2Dz4WLbmOitrCTF9GT">脚本输出即为 4 个 JSON，按原格式替换 <code data-page-node-id="ysLc7s0Hc8zoDVUEoNqjer">index.html</code> 第一个 <code data-page-node-id="VM12u8yj6SaIJeBIm1QESp">&lt;script&gt;</code> 块中对应常量的值。</li>
+  </ol>
+</section>
+
+<!-- ===================== 4 ===================== -->
+<section class="card" id="s4" data-page-node-id="iQ9prQUBVw1J1opoZBR8wJ">
+  <h2 class="sec" data-page-node-id="VjhcSMsPUyfeUkRFpkCOMy">4. HTML 模块清单（页面从上到下）</h2>
+  <table data-page-node-id="qKmDdcyQy6IrnKaQmJPwEN">
+    <tr data-page-node-id="RjCuDmoufCRNGATpsiiSFW"><th data-page-node-id="lvmwttqOC3Ssl7gs6679yq">模块</th><th data-page-node-id="9sxL7IFi5zKnNhL0uTxEXe">data-module</th><th data-page-node-id="EwdkKhZgx4E4oiJOWxzquD">关键 DOM id</th><th data-page-node-id="OERa8DVryrrmyRWpmXHdB1">渲染函数</th></tr>
+    <tr data-page-node-id="rveFXOx5C5SglSzUkT1d5I"><td data-page-node-id="OBz64GZLwuXSSfGy9PnZ96">顶部「更新日期」</td><td data-page-node-id="eL5VdGPnEibtPYq43KOi31">—</td><td data-page-node-id="o4csCVHmRXLCA4FEBmk31b"><code data-page-node-id="4QgV1gt3JdI7OcG2brBDt6">metaLine</code></td><td data-page-node-id="H4odAxIONG6kOmO1FxVEZv"><code data-page-node-id="zKqDk7iCiJsYf1eYsD2ZG8">renderMeta()</code></td></tr>
+    <tr data-page-node-id="CbCu8S5IppBZ1HQPvwVUTa"><td data-page-node-id="V2i34sXDfKGRO1kkjXJDEA">顶部「今天（含农历）」</td><td data-page-node-id="e4hbqrmRHnUMHN4pgjKx9g">—</td><td data-page-node-id="kdZQmm8Fw53xl5VktYHqg8"><code data-page-node-id="VJ1pZsDoo4WGNWrOTLqUQC">todayLine</code></td><td data-page-node-id="gpqBKOuS2MkdeVCtTVsANr"><code data-page-node-id="PRIkjvToN7ckXAcAXEvsIC">renderToday()</code></td></tr>
+    <tr data-page-node-id="SuB0vABqrru2k3Fyug2zLh"><td data-page-node-id="2cXfwRFKOG9fcKHz7GHgQ5">月历（右上角固定）</td><td data-page-node-id="TM3zER2xgyqvcZ8OECTv9c">—</td><td data-page-node-id="oCCGCvpee3LjAxvwZMl36T"><code data-page-node-id="yYDyo5Bl8lNHan18UdOYOa">metaCalendar</code></td><td data-page-node-id="uZzV4Rav9eK0H7JQVklJsK"><code data-page-node-id="wCYO7hHJYv9d9pc7W636Qb">renderCalendar()</code></td></tr>
+    <tr data-page-node-id="vx3COTtdyQcWC1J3EFeVCM"><td data-page-node-id="kIMMapgdwVxIyHLbCMQsvx">月度注塑机台负荷仪表盘</td><td data-page-node-id="BbwDvGUNRIVfD4FNUFqCD3">—</td><td data-page-node-id="L85weFCUmv9wC0PnjHQKpu"><code data-page-node-id="VWaXDxcMGxBK5R3sKJEjO8">metaGauge</code></td><td data-page-node-id="Mrwhc0HMZEFA5mOZIomF6J"><code data-page-node-id="wPpHM6VP3RAAccyN7ZYBzu">renderGauge()</code> / <code data-page-node-id="wLZzpw8qUy99OEc1Ds6kp8">computeGauge()</code></td></tr>
+    <tr data-page-node-id="STXoinKw0C9gvgD5uvrr78"><td data-page-node-id="5Xye0yJ781HDKBu4TDFupo">KPI 总览（4 个手动输入 + 1 个计算卡「KPI日均目标值」）</td><td data-page-node-id="WOBrlEMzzPQCFKfT4ERT9o"><code data-page-node-id="RB8YHdbD3rnhxQDG6FVYS8">kpi</code></td><td data-page-node-id="EMDVDA8PWanSu9IkUDc7JC"><code data-page-node-id="GTkyNPyl4kvltvFDSmAR1d">kpiGrid</code> / <code data-page-node-id="3ZHS6p53dWY5DEUYHtd95z">kpiDailyTarget</code></td><td data-page-node-id="zldOH98684EuueRc5EDhL6"><code data-page-node-id="UzwEn22BKIEhyR7zl6QxCc">renderKPI()</code> / <code data-page-node-id="tXIle4TOGW8CfCiRaOQcBd">computeKpiDailyTarget()</code></td></tr>
+    <tr data-page-node-id="XqLVNBJeFm8SgTXWLFHTSD"><td data-page-node-id="at8aRsALkIcEcKOD4on5GV">机台产能分析</td><td data-page-node-id="0YdcL2XDnGAMwCSoExp5RG"><code data-page-node-id="Pk5IJ9sJsGGBgsPCioMnAS">machine</code></td><td data-page-node-id="LcHralIvTdqrNP1nPBCl6N"><code data-page-node-id="8c6o8GejO93EwwgQXnM3SZ">machineTabs</code> / <code data-page-node-id="lt0VG6iFxqKrfMkDTEONBD">machineChart</code> / <code data-page-node-id="Q24yOHT2YTm5cRdiNKbb2k">machineRange</code></td><td data-page-node-id="6XvNK6cT4wpzbztN2v565G"><code data-page-node-id="Ec03SHbtA2chGHbbX1KOlT">renderMachineTabs()</code> / <code data-page-node-id="5Y1LvCFo85ZeRoiPxzlx8b">renderMachineChart()</code> / <code data-page-node-id="B2ktFIrZdiImp5ZYaqEiXi">buildMachineOption()</code></td></tr>
+    <tr data-page-node-id="LZTJGBT5AVrpWzaWesqJWv"><td data-page-node-id="VcpJc87Q2eHp0BgTRpD8c0">模具产能分析·品种</td><td data-page-node-id="4zjLqHslaSMFYfZygYh8cS"><code data-page-node-id="RewNipPXmECY93Ldoo8CNz">moldVariety</code></td><td data-page-node-id="d4IcjJZB9LZHaBHPpYfw4C"><code data-page-node-id="MB3q2c1SDgiSKnkzpFsBnH">varietySelect</code> / <code data-page-node-id="cRj3P6G6mZuDkeURlxWBPW">varietyDrop</code> / <code data-page-node-id="BcYLSwN65mrVlxGW8ulnhw">varietyMolds</code> / <code data-page-node-id="gsBiARrQF2XaDkHLSSluMP">varietyCap</code> / <code data-page-node-id="POf9FCh0guNuHC8aZONySV">moldVarietyChart</code></td><td data-page-node-id="ThAiUyfgT3LCyqUTF3BUV2"><code data-page-node-id="uKwu5LuTrh6KDmsvyQ7K08">renderMoldVariety()</code> / <code data-page-node-id="bt9q6M2Bxa4roCmARhLwp2">buildVarietyOption()</code></td></tr>
+    <tr data-page-node-id="Jyv4UR2iNFD0uZiRZD6TVU"><td data-page-node-id="5QdBRYrdRQAPBC7DpSUb8c">模具产能 GAP</td><td data-page-node-id="yybYLhsAEXnzSz5HOeJxgm"><code data-page-node-id="L7CgOSzlB87ohqLP97EEHR">gap</code></td><td data-page-node-id="UUTqkO5kZAOBbNXjla2BKN"><code data-page-node-id="ldGn5BlNcpcACQt4QqsFuw">gapContainer</code></td><td data-page-node-id="HaXBhzfrlB3YfAE0kA0Ntn"><code data-page-node-id="Ple1azo9NTult4MHs3zInk">renderGap()</code></td></tr>
+    <tr data-page-node-id="MpGvNkFFFGsfhLqt02Lo2G"><td data-page-node-id="iQC8WToKAsNL26JcHRCTX2">实单+预算待生产前十占比</td><td data-page-node-id="GRkAfTECHk0ij6HO90XluF"><code data-page-node-id="C5EkdSEDGyuq7E4TajFrrE">top10</code></td><td data-page-node-id="voqEeud1uR7CNnLwpsLLe0"><code data-page-node-id="m5kADQB6uQED8zurba3y4b">top10WeekSelect</code> / <code data-page-node-id="9gkXhCUYoJdKXWomtA4yUh">top10ShellChart</code> / <code data-page-node-id="o6edNJGUQRVvrJISYeNGst">top10AccChart</code></td><td data-page-node-id="cLKGgwrmirLtdmI1tHeXEp"><code data-page-node-id="8DD2bgPASoUgy7d6rRKgue">renderTop10()</code> / <code data-page-node-id="y1HDVuV7aJkCYQxaDF3UKH">buildTop10Data()</code> / <code data-page-node-id="VnwAzpGAcZ7oE6Oeaqd1a0">computeTop10Week()</code></td></tr>
+    <tr data-page-node-id="mJIrrPYBWMst7XuOMEvRnM"><td data-page-node-id="WevC7uMiOgWNkkTBEVLUIJ">注塑原料1+7需求推算（首列「使用产品」）</td><td data-page-node-id="05XFU57BuX8YZ6DYO4Ob8n"><code data-page-node-id="bVN2D62oafMNWgRYHmnJbn">material</code></td><td data-page-node-id="9OIKDQg5iiE5ytZgMGgu31"><code data-page-node-id="pyUSO10uPpR4BS8CwBdzSu">materialAContainer</code></td><td data-page-node-id="S8K9TiMHSvKS4UDROiHK29"><code data-page-node-id="bBBQOZJV20yCxv2PLViCNt">renderMaterialA()</code></td></tr>
+    <tr data-page-node-id="FH0cf1vi7leUgxE9vCaW5b"><td data-page-node-id="DIzvnyvHdH7sh4WKPs1ZA5">注塑外壳库存水位（饼图 + 明细表）</td><td data-page-node-id="8Txuv5XgbHNxRsDGij2yGH"><code data-page-node-id="etgu7jvtYfPrElpqFDpaNk">stockPie</code></td><td data-page-node-id="TrsPtOg63vKQ77f6wsTBS5"><code data-page-node-id="xlczIohXc7z9usjRfNCLH2">stockPieChart</code> / <code>stockTableContainer</code></td><td data-page-node-id="BkHrBYQX7QFnjHfG5xGPmC"><code data-page-node-id="taIO8EooNXuE5CPiUocJNy">renderStockPie()</code> / <code>renderStockTable()</code></td></tr>
+    <tr data-page-node-id="gu7CCwwRZBL91ZQvd4IAW1"><td data-page-node-id="vWBQBKMWU4zwsEiAToEf4V">注塑外壳/注塑件入库汇总</td><td data-page-node-id="9hFs0ZWFuBQvyP02UJhXe7"><code data-page-node-id="SWB4SFh9zBBjhGCafsX6gV">inbound</code></td><td data-page-node-id="ZxSg8D5mVrZnZ2Bl6Ah6V9"><code data-page-node-id="FBZfFCx1ScRvjB3cvVaSoP">inboundContainer</code></td><td data-page-node-id="qIT98DLPzJh5oQbC8d65Hm"><code data-page-node-id="Nisyc9hc4Lkxtuy4E8Aoub">renderInbound()</code> / <code data-page-node-id="LrF00x3pbhbJMuwcGGz1lr">renderSummaryTable()</code></td></tr>
+    <tr data-page-node-id="IN9PbPAIPF9cBlb7Fj9xYx"><td data-page-node-id="lgTAvHhGQrXubCYPizFs21">注塑外壳/注塑件生产年度汇总</td><td data-page-node-id="4Z5oeksOZ76kOrLbMznqWL"><code data-page-node-id="vvsEXolP8w87VlsvFV8gn4">annual</code></td><td data-page-node-id="uanB6gY09WyrRNbgXv62fH"><code data-page-node-id="sfVokT2ElK6GWf5y6hoNbp">annualContainer</code></td><td data-page-node-id="wtSGDxnsfO9kWOuOWiP2lF"><code data-page-node-id="Nnc4YpOrUH6g8JdzqZCb9T">renderAnnual()</code> / <code data-page-node-id="wLONZED6AlzA2jydjkK3rZ">renderSummaryTable()</code></td></tr>
+  </table>
+  <p data-page-node-id="qBOg6i9K3doMSTKEB3hEtM">所有模块统一由 <code data-page-node-id="y23V93kxBuryHrHtYRl1Va">renderAll()</code> 按序调用渲染；上传/恢复后也调用 <code data-page-node-id="m8PURGe5SSDD9bltGeMXuB">renderAll()</code> 全量刷新。</p>
+</section>
+
+<!-- ===================== 5 ===================== -->
+<section class="card" id="s5" data-page-node-id="td1EBlE8DioPsSSb3FtEo6">
+  <h2 class="sec" data-page-node-id="cd80pg7hgZDM3jC7wWwdvB">5. 业务规则说明（核心）</h2>
+
+  <h3 data-page-node-id="76pV1V4vPDme1Jt0CZclmn">5.1 J~W 列公式（前端复现 Excel 公式，computeDetailRows）</h3>
+  <p data-page-node-id="VfENsBhFbINws06z57AceB">上传「工单备料明细」后，逐行补算 Excel 中 J~W 列（有值沿用、无值补算）。列含义（1-based 列号）：</p>
+  <table data-page-node-id="tTz7779rXMckumx4mbZT9H">
+    <tr data-page-node-id="uSFQqoWdEmKzb94rxLV3JP"><th data-page-node-id="hdq7aVL53Poj6qix3FnwRz">列</th><th data-page-node-id="PhxhHhvONqSMgsEgEujbs6">含义</th><th data-page-node-id="7XzNM7uJgaVdrg6dATV6OK">补算规则</th></tr>
+    <tr data-page-node-id="ALiDUGLP7ayBTyUCRJdXaS"><td data-page-node-id="Xyj6DcGG3iDSMmJ26AJviQ">B(2)</td><td data-page-node-id="BdNBj6v3bm28do7L7G7p7e">订单号</td><td data-page-node-id="eZCVHwBytK16PO6LgvqN55">用于查上线日期映射 lineDate</td></tr>
+    <tr data-page-node-id="eJdGaO6f59AGDKym9iteij"><td data-page-node-id="HtERX6KQsfOQzcept3qz9c">C(3)</td><td data-page-node-id="jjvRe5DNGiitAkOcbqm89s">料号</td><td data-page-node-id="xGB9O4X725DgU6BtXllV5A">用于查产能参数 capacity、BOM 原料 bom</td></tr>
+    <tr data-page-node-id="evF8H4VE0nG9CK5ecC7GMs"><td data-page-node-id="rP64FSuVqpUkrvB3OEzQCw">H(8)</td><td data-page-node-id="13J1fme3sj9rmLRkP5jrCg">需求数量</td><td data-page-node-id="vhjsMaFBDCSoBtqNaWIBOR">K 列累加基数</td></tr>
+    <tr data-page-node-id="QmVcN65HAhVWobweC4Js71"><td data-page-node-id="sKGqZyxoQAOi8iFGLnGClT">I(9)</td><td data-page-node-id="mWAaFUSOdSHMcB0AVI9jh0">已排产累计数量</td><td data-page-node-id="iHqIxAaUsBBE3fsYNCaB1p">与 K 比较，判断是否已排完</td></tr>
+    <tr data-page-node-id="ggu0ydZbLa3K5NHDh01mBE"><td data-page-node-id="30G2dlAFCdnsae5KAWfVeZ">J(10)</td><td data-page-node-id="42heIJTlV4ILMzA46Gs5mu">订单生产工时（小时）</td><td data-page-node-id="3kXxq9ZfaGrcC72SkY422W"><code data-page-node-id="fud4uNKSzPr9wlKqS1g4cp">J = 周期S × 待生产L / 3600 / 穴数R</code>，向上取整 2 位</td></tr>
+    <tr data-page-node-id="7oh97ImMpbuDw43j6Fzymp"><td data-page-node-id="XTuefwApbrAgjjo7GTBP6D">K(11)</td><td data-page-node-id="pL6AwKxxLbo0PYfF7tXwGN">同料号累计需求数量</td><td data-page-node-id="QlKdqdbBFHW5MbxrdS7gh0">由 H 按料号累加（第一遍扫描）</td></tr>
+    <tr data-page-node-id="Ak8qvYoXzJum5uQwXkGCrU"><td data-page-node-id="KR6A5zjNlQhhFpKCEFg8or">L(12)</td><td data-page-node-id="m2cGr1ZWHOIftUJpilLamd">待生产量（扣库存）</td><td data-page-node-id="DzAoKDPDsZcAb1ESjlu9NM">三段 IF（见下）</td></tr>
+    <tr data-page-node-id="4tguFbDjIDcNa2ily7ay0d"><td data-page-node-id="UK2MJThE8OMGtNuGCG2POJ">N(14)</td><td data-page-node-id="q3TzSvIQmHPagpPWr7thA4">品种</td><td data-page-node-id="LZCFsQ0DIwjLu2CiNZwQ3l">缺省取 capacity.p</td></tr>
+    <tr data-page-node-id="0zZwZ9IAQ4kQ6aypoHlkL3"><td data-page-node-id="47RCR3tJFkbBzCEu6Vb0K8">P(16)</td><td data-page-node-id="6wqMJ3vmGPbqiEm8kT8vDV">周数</td><td data-page-node-id="faIz9m0ZfvuG2yboDo0bEF">缺省由上线日期反推（weekFromLineDate）</td></tr>
+    <tr data-page-node-id="ijGgwaNKgh0EvaYcmLjwxc"><td data-page-node-id="CqMGOgvDaYRWWBk1EcEAxu">Q/R/S/T(17~20)</td><td data-page-node-id="P27XKyE8sUyQJ8GozS2Eje">机台 / 穴数 / 周期秒 / 毛重克</td><td data-page-node-id="tRGfYWrI20AaRVlCi4gV11">缺省取 capacity.m / .c / .t / .w</td></tr>
+    <tr data-page-node-id="1mp2iYknKYaAB4VBbqFpth"><td data-page-node-id="lR4eWspLLhyJytrphwixcH">U/V(21/22)</td><td data-page-node-id="hITMx3o5L1PgAlElQFtcNH">原料代码 / 原料名称</td><td data-page-node-id="mdpBOlQv6K021NzJV2hsNB">缺省取 bom.c / bom.n</td></tr>
+    <tr data-page-node-id="eAZ9ymBeGLJPPZ5HWk4tGD"><td data-page-node-id="YG7RAcqeRF93ffJKFA3AjD">W(23)</td><td data-page-node-id="1Q37l0qifw7Bp5lsAISz9Z">原料预算KG</td><td data-page-node-id="DVEFKsBc9cJCQY97yMTNnA"><code data-page-node-id="zDeXRqRin1EGmXTdWCRAO3">W = 待生产L × 毛重T / 1000</code>（克→千克）</td></tr>
+  </table>
+  <h4 data-page-node-id="sMkFPUuDqqpD7K7FALDVC8">L 列「扣库存」三段 IF</h4>
+  <pre data-page-node-id="xwPt7nhQFKzqzPPhWZGFwJ">若 I &gt; K[i]                      → L = 0            （已排产累计超过需求，无待生产）
+否则若 C !== prevC（新料号首行）   → L = H            （待生产 = 本行需求数量）
+否则（同料号后续行）：
+  若 nextSum(K[i+1]) &gt;= K[i] 或 prevL !== 0 → L = H
+  否则                                      → L = K[i] - I（剩余缺口）</pre>
+  <div class="callout danger" data-page-node-id="uzLNUTeVpZGOrL8uguB5LI">该函数 <code data-page-node-id="qrX0ITiJzIl3oQipfO2dWC">computeDetailRows</code> 已经 300 行金标准验证 300/300 一致，<b data-page-node-id="0b4mF8BTDSeSQpwLLsDHk8">逻辑严禁改动</b>，只能加注释。</div>
+
+  <h3 data-page-node-id="ilFJ7GBteTaAwYyichs8Dd">5.2 机台分组规则（mapMachineGroup）</h3>
+  <p data-page-node-id="9PrTFSbZAMYdRwOLfvJVF6">把机台字符串按吨位关键词归一（顺序敏感）：</p>
+  <pre data-page-node-id="fgJ9tb6StRyzfvXu5FzrYo">含 400 且含 550            → "400T-550T"   （生产外壳）
+含 230 且（含 280 或 260）  → "230T-280T"
+仅含 260                   → "230T-280T"
+含 150 且含 280            → "150T-280T"
+仅含 150                   → "150T"
+仅含 90                    → "90T"
+其他                       → "其他"</pre>
+
+  <h3 data-page-node-id="8bMPNJtJFAAn6BwZiukDBz">5.2b 机台具体化映射（抽取侧 map_machine，改善5）</h3>
+  <p data-page-node-id="CFH8eRs21Fzd2rFGAHwvOc">原始数据4 的 H列【机台】已从笼统表示改为具体吨位（480T/150T/260T/90T/400T/230T/550T/450T/85T/0）。抽取脚本 <code data-page-node-id="qAR1teM49sFiwaY9m5M6ZI">_extract_mappings.py</code> 的 <code data-page-node-id="xqmf6XpVKjTnHfjci56jTq">map_machine()</code> 在写入 capacity 映射前，先把具体吨位映射回网页笼统分组：</p>
+  <pre data-page-node-id="ViQqpftTzebjoB2teP0Tfg">85T / 90T              → "90T"
+150T                   → "150T"
+230T / 260T            → "230T-280T"
+400T / 450T / 480T / 550T → "400T-550T"
+0 / 空 / #N/A          → 非注塑件，跳过</pre>
+
+  <h3 data-page-node-id="daYidGuHWF2SkEUAjcgIxU">5.3 模具提取正则（extractMold / moldCoreCode）</h3>
+  <pre data-page-node-id="bVHirydWS7mbNdS3GBND65">extractMold：/DH\d{3}[A-Z]?/i   匹配 "DH" + 3 位数字 + 可选 1 字母（如 DH010、DH001S），从规格/品名中提取
+moldCoreCode：去括号注释、按空白分词，保留尺寸词(S/M/L/XL...) 与型号词(字母+数字+字母)，用于预算回退匹配</pre>
+
+  <h3 data-page-node-id="zJAZVc5IdVeybLchwhnlid">5.4 周数口径</h3>
+  <pre data-page-node-id="N5VQBbLeeh6PKN5nipsaHr">excelWeekNum：Excel WEEKNUM(return_type=1)，周日为一周首日，1月1日所在周为第1周
+normalizeWeek：把 Date / "2026WK34" / "WK34" / 数字34 统一成 "yyyyWKww"；无法识别 → "未排期"
+weekFromLineDate：上线日期减 7 天后取 Excel 周（补算 P 列用）</pre>
+
+  <h3 data-page-node-id="P9Z736vcd1MDpSdJYKYbdu">5.5 GAP 产能公式（renderGap）</h3>
+  <pre data-page-node-id="B0ElOORc40N5kkTHduz0EI">每周可供产能 = 3600 / 周期秒 × 22小时/天 × 套数 × 工作天数 × 0.85（效率系数）
+GAP = 可供产能 - (实单 + 预算)
+富余产能弹性 = GAP / 可供产能 × 100%</pre>
+
+  <h3 data-page-node-id="pyKhgFkXSyh67lE3LrHm1v">5.6 仪表盘公式（computeGauge）</h3>
+  <pre data-page-node-id="WkGAbB9mbQN10M2f4ObqGA">月度负荷理论最大值（万PCS） = 1500PCS（单台注塑机日产能均值）× 11（台）× 开机天数 / 10000
+负荷% = 待生产外壳数量(万PCS) / 月度负荷理论最大值 × 100</pre>
+
+  <h3 data-page-node-id="EdsqtHbnstVX0d5Rx7vDVf">5.7 预算按品名聚合（parseBudget）</h3>
+  <p data-page-node-id="vygrT0HS5eVEBv4r4mFKhn">预算表从 L 列起「两列一组」（数量/工时）。偶数列 = 工时列，奇数列 = 数量列。</p>
+  <pre data-page-node-id="h5GpsUCnfUT7oOWWPc6uXS">机台级 budget[组][周]         += 工时列值
+品名级 budgetByVariety[品名][周] += 工时列值
+品名级 budgetQtyByVariety[品名][周] += 数量列值（用于前十按周重算）
+budgetVarietyMachine[品名]    = 机台组（用于外壳/配件分类）</pre>
+
+  <h3 data-page-node-id="xpGwIoNnxyK3dDsy41fECI">5.8 外壳 / 配件分类</h3>
+  <p data-page-node-id="o7K9d8NlzLau1Agr0a1o0J">机台组为 <code data-page-node-id="3xJN9sRpXLD3k66tdvmeDs">400T-550T</code> 的品名归入「外壳」，其余归入「配件」（前十占比两张饼图分别展示）。</p>
+
+  <h3 data-page-node-id="Or66tTEB6jbmH3LxEBRJkz">5.9 农历算法（solarToLunar）</h3>
+  <p data-page-node-id="aGmyiCEUrgIvciYth2uTuL">简化公历→农历算法，覆盖 1900-2100 年。数据表 <code data-page-node-id="piHc2n04z56XYzVrEOjgn2">LUNAR_INFO</code> 每年一个十六进制位掩码编码大小月与闰月，仅用于顶部「今天」栏显示农历日期。</p>
+</section>
+
+<!-- ===================== 6 ===================== -->
+<section class="card" id="s6" data-page-node-id="SPEBO668hlhxVHUEunQgyt">
+  <h2 class="sec" data-page-node-id="yDVrRrH7RfG7V6ZNNGxSWz">6. 核心函数索引</h2>
+  <h3 data-page-node-id="QNm3jq67vMeW8M4mt8aPEq">解析类</h3>
+  <table data-page-node-id="TuS2Ju1RX0Oj5kMIMO5D3W">
+    <tr data-page-node-id="8w4j5itlSS3FCyBEbU6XGK"><th data-page-node-id="py70E3IZits2pPqLLqszy2">函数</th><th data-page-node-id="n6PPR3C2QnmGatfesgFgAs">职责</th></tr>
+    <tr data-page-node-id="674mGfGA5BDQTSIxG8M2Hx"><td data-page-node-id="xEF8RvuIGGyjBJqLyKEq09"><code data-page-node-id="S9DIJbkdjOvZDdMoFQqAMa">computeDetailRows</code></td><td data-page-node-id="5z1NzhWQlUXCKrSdBC1o39">补算 J~W 列（核心，金标准，禁改）</td></tr>
+    <tr data-page-node-id="IFTQLByHYh0JfR9Twbcp1P"><td data-page-node-id="RU7MFFfDFjxjVDI7MlATke"><code data-page-node-id="xk3EeT24aGrlcdCYsFCm2h">parseDetail</code></td><td data-page-node-id="LPlxbJFVEtDPpNGbMvEjIK">解析工单备料明细 → 机台/模具聚合</td></tr>
+    <tr data-page-node-id="1WjEihiGodjtzEfhfGnj9Y"><td data-page-node-id="Kw8bhfizGVQPqAnMgBIqAY"><code data-page-node-id="fZndTescNpajlfeRw4zwHf">parseSchedule</code></td><td data-page-node-id="bJHYZbtbZIV77ewCmU7Vp8">解析主排程 → 订单号→上线日期</td></tr>
+    <tr data-page-node-id="MbAJFGeYp0fHu7nlwRpdR9"><td data-page-node-id="GN5EjIaPVYuv70era3p36N"><code data-page-node-id="h9VkHwKq90s9zKsKLo5NCE">parseBudget</code></td><td data-page-node-id="RlznrrKsi67kCbIYRlygSP">解析预算 → 机台/品名级预算聚合</td></tr>
+    <tr data-page-node-id="WP8qXKqH76fNejbzjQkA0l"><td data-page-node-id="T62oZvvQpIePqljz7wnz7S"><code data-page-node-id="8KFHnaNNuQmZA8YeFtXnoG">parseBudget6</code></td><td data-page-node-id="eztciHe1eCANYlEYfgY8up">解析原始数据6 → 模具级预算</td></tr>
+    <tr data-page-node-id="W2tQRFIvPcXpqMuuLgVLh2"><td data-page-node-id="0kzXs9x5TASspgfQhbPnrp"><code data-page-node-id="MbAZBxWTZZ02yx7LKeZ7lw">parseAnalysis2 / parseAnalysis3</code></td><td data-page-node-id="M1BealGCybxeXGN2tJboTx">解析分析2/分析3 → 机台数据 / 前十数据</td></tr>
+    <tr data-page-node-id="ZhQxJYsIAc0AMBaEAXHiH6"><td data-page-node-id="fw0nAMBYjHriAoSOA2ebvY"><code data-page-node-id="lmBCt15PV0PEAH4ZFlH8DA">parseWorkbook</code></td><td data-page-node-id="BQEtWDd0Ax24hOq3w4t9Ki">汇总解析入口（识别各表并调用各解析器）</td></tr>
+  </table>
+  <h3 data-page-node-id="7yOZOL2W8CTuE6AbXu0Boa">计算类</h3>
+  <table data-page-node-id="aZQS36mCGA5PG98BGyOq07">
+    <tr data-page-node-id="BKEci6sevzuT9ZAr4eC2kO"><th data-page-node-id="3PJB955rXNl99I2i8I81aD">函数</th><th data-page-node-id="FNFkxArHazomEn0hpnAgpQ">职责</th></tr>
+    <tr data-page-node-id="uM38AMm6djCRTBdP0BPkXh"><td data-page-node-id="DoVlfj2g7Bdba3C207mO8F"><code data-page-node-id="jGInRutdaWYUVJbZDHQWHp">computeGapReal</code></td><td data-page-node-id="7av4fTiDXSa9j3EDnGm378">GAP 实单重算（SUMIFS 复现）</td></tr>
+    <tr data-page-node-id="xW54KejyGMF5OeSyJ6g3xA"><td data-page-node-id="t6qKCFahReLnHyqyAGu8B9"><code data-page-node-id="gn7xB2L15bX9ytvCKzyAW2">computeMaterialDemand</code></td><td data-page-node-id="aUo5ATIzeC80HnMstRcb0G">原料需求重算（SUMIFS 复现）</td></tr>
+    <tr data-page-node-id="6d1hhRK1UHHdxpCpf1oPCI"><td data-page-node-id="RamuME4IhsCCLR9iESApad"><code data-page-node-id="umAJtG4O7qApz2qHJJo0x1">computeGauge</code></td><td data-page-node-id="wezbFT29wYia2PMzaGhznl">仪表盘负荷百分比</td></tr>
+    <tr data-page-node-id="LZ0ZeNw4FS0UrbCiFaVkDN"><td data-page-node-id="h35XUKTMWuOcyC9p1WFblk"><code data-page-node-id="h9XA8OAGq5hLBljpE0T7Bl">computeTop10Week</code></td><td data-page-node-id="caEY0AkdtFx9TQzy0kkBOO">按具体周重算前十</td></tr>
+    <tr data-page-node-id="FfpBfxsITdU6D8GoqRqoLB"><td data-page-node-id="6BvbUCjMDMO1LqOHzf61h2"><code data-page-node-id="ZLtSS2WEDfUlwkfyPmqhOa">buildMachine / buildVarieties</code></td><td data-page-node-id="h1QlJG9t8mQEWKtEhPR901">组装机台 / 品种数据</td></tr>
+    <tr data-page-node-id="YXTFb88QvAdiGi35ZRpdFx"><td data-page-node-id="JzIr6VNW5g23w6v02xjqGM"><code data-page-node-id="zIQLMQz2IlxQ54GoSXtQDH">buildMachineOption / buildVarietyOption / buildTop10Option</code></td><td data-page-node-id="5IWtzc0E5PKnms3CGLm0sb">构造 ECharts option</td></tr>
+    <tr data-page-node-id="HBpljCNynZUZDvTujyrfY3"><td data-page-node-id="IzISkFUUKIgJT2K8YSkpfk"><code data-page-node-id="4VPVzY1WEMybCpLULV0bl8">mapMachineGroup / extractMold / moldCoreCode / moldMatchesVariety</code></td><td data-page-node-id="LhLEspSkM2X00exYnBu9Zc">分组与模具匹配</td></tr>
+    <tr data-page-node-id="1AbDWaOy0gmRlHydhJ0aSB"><td data-page-node-id="eR0VALeyn6WEYNu3QPaHJt"><code data-page-node-id="NM73y9KbhDjhvhYiapwEmw">excelWeekNum / normalizeWeek / weekFromLineDate / solarToLunar</code></td><td data-page-node-id="wyAhB5YUDRagHqKaCafGpK">周数 / 农历算法</td></tr>
+  </table>
+  <h3 data-page-node-id="fcFqYn1exhDCFo8boQ9GBQ">渲染类</h3>
+  <p data-page-node-id="Nb7pWuEDTyCt83iCgh8qFJ"><code data-page-node-id="ivHnpAvW7ylBDJXFynxleP">renderMeta / renderToday / renderCalendar / renderGauge / renderKPI / renderMachineTabs / renderMachineChart / renderMoldVariety / renderGap / renderMaterialA / renderTop10 / renderStockPie / renderStockTable / renderInbound / renderAnnual</code>，以及总入口 <code data-page-node-id="q1VQeFHGwvqUYH2AiltTYF">renderAll()</code>。</p>
+  <h3 data-page-node-id="iDlVUDza3CJBEvu1kzEtmV">工具类</h3>
+  <p data-page-node-id="5ueuv8F9FKAASA5Jh3rigP"><code data-page-node-id="LIgvyzfFn6J0fhxlcpiUYC">num / sum / pad / fmtWan / fmtMoney / fmtInt / fmtH / fmtTableNum / fmtTableInt / fmtRate / escHtml / escAttr / deepClone / saveJSON / loadJSON / getChart / toast / wsToDense / absCell / absStr / collectFormulas / normSheetName / findSheetName / weekRangeLabel / displayWidth / wrapUsage / syncMachineSlider / syncVarietySlider / snapCalendar</code>。</p>
+</section>
+
+<!-- ===================== 7 ===================== -->
+<section class="card" id="s7" data-page-node-id="usOINDW8BFmwGT25RBcTIW">
+  <h2 class="sec" data-page-node-id="mbswSXAfOt4e0cJNS0ycFw">7. 如何增删模块</h2>
+  <h3 data-page-node-id="HqzBYeI4G3w60nf4RWjL2h">新增一个图表模块（以复制「机台产能」为例）</h3>
+  <ol data-page-node-id="J2nwS09SQvfeZCvNFyOm2S">
+    <li data-page-node-id="YoGM6sRImDr9SC7e99RFKa"><b data-page-node-id="69MrrktbOk4gtiSxXOjndX">加 HTML section</b>：在 <code data-page-node-id="MPQHgAZ4jHlwWKwB1X8ifu">&lt;body&gt;</code> 中新增一个 <code data-page-node-id="0pg4dWMHQH9iKFJerofuK1">&lt;div class="section" data-module="你的模块"&gt;</code>，内含标题、描述、图表容器 <code data-page-node-id="RWtRuxOC5v85q3qhWCjTFx">&lt;div id="你的Chart" class="chart"&gt;&lt;/div&gt;</code>（以及需要的筛选控件）。</li>
+    <li data-page-node-id="JNflpvYtlJqVy3YAgPIeeJ"><b data-page-node-id="rBWOfXw3T2B8rcmQWA2eDX">加渲染函数</b>：在逻辑 IIFE 里写 <code data-page-node-id="MJkBKmVs1wKPz6PcfTaJqy">buildXxxOption()</code>（构造 option）与 <code data-page-node-id="sgDYG95LceDDTm3NBFVAUB">renderXxx()</code>（<code data-page-node-id="53CPBUGNti9vS6xrJBwpl9">getChart('你的Chart')</code> + <code data-page-node-id="FQtdtUan21ljIP7UkXnSO4">setOption</code>）。</li>
+    <li data-page-node-id="gtykls1YDdfEAyI0oTrcvE"><b data-page-node-id="s4Mb1qa00zQUezhsr3LM61">注册进 renderAll</b>：在 <code data-page-node-id="PftBm6tdh5EMFqXLGmSziU">renderAll()</code> 末尾追加 <code data-page-node-id="HDh4rKK94AR7yDKpSYN46n">renderXxx();</code>。</li>
+    <li data-page-node-id="Tf6fbLqtfr0Mndc4Lux45U"><b data-page-node-id="jzK8mZjv0im6yn1TnAy3bG">（可选）绑定事件</b>：如有交互控件，在 <code data-page-node-id="XU7xV9POm12lSXkVjFiWBh">bindEvents()</code> 里加对应监听。</li>
+    <li data-page-node-id="rFpO9PWvazloR44Im6XlGR"><b data-page-node-id="07HLXpwwGtwlwGVA2V4Zib">（可选）暴露调试</b>：如需 QA 测试，把 <code data-page-node-id="WkiOc9gnLEehp6SmZu115M">buildXxxOption / renderXxx</code> 挂到 <code data-page-node-id="6xd3gUJy58iFVgWdS4U4nt">window.__injectionDebug</code>。</li>
+  </ol>
+  <h3 data-page-node-id="c0ZQBgr5IGloTJMhibUmY5">删除一个模块</h3>
+  <ol data-page-node-id="iE2AnpqKAWaRklw1mHT7Sk">
+    <li data-page-node-id="ET48sQVkm6OR1wBHHktWdS">删除对应 HTML section 块。</li>
+    <li data-page-node-id="5EDA2P93lIV4u6FH4OGFpW">删除/停用其渲染函数，并从 <code data-page-node-id="fVznzrfwzKznVsnMaC0r6S">renderAll()</code> 中移除调用。</li>
+    <li data-page-node-id="42jCxqMSE9MXDPvPaPqwvQ">从 <code data-page-node-id="5KnQghyhX8UqdGYYojKhvp">bindEvents()</code> 移除相关事件监听（若有）。</li>
+    <li data-page-node-id="DhEy4Jj0J1QAFaN9UF6ZJn">从 <code data-page-node-id="jbg1KxzYIIN9blR5cbZxdV">window.__injectionDebug</code> 移除对应暴露（若有），并确认无 QA 脚本引用。</li>
+  </ol>
+  <div class="callout" data-page-node-id="r9mSNGNDucGuw6JeufSi6L">保持 <code data-page-node-id="rF0TBXvk0DrAA2TfJERIJa">data-module</code>、元素 <code data-page-node-id="5O2UP88FmAPtvx1vCTeMxb">id</code>、函数名与现有模块命名一致，避免破坏外部引用。</div>
+</section>
+
+<!-- ===================== 8 ===================== -->
+<section class="card" id="s8" data-page-node-id="SweCi32p8KsAw27xITmY8K">
+  <h2 class="sec" data-page-node-id="J8BjBlbhXIzQzzELnxuPrJ">8. 维护与回滚</h2>
+  <h3 data-page-node-id="e3HdoLAa82xwJdECdlsjfG">重新抽取内置数据</h3>
+  <p data-page-node-id="O8LgsZ08noFuemXPeS9xuC">运行上级目录的 <code data-page-node-id="cmyaaTK1Byz9OX6sTGc1rm">_extract_data.py</code>、<code data-page-node-id="sh19iuZbK9gTPfTOsSmGdD">_extract_mappings.py</code>、<code data-page-node-id="copIIrUWtyzW6Y0tqfx06e">_extract_analysis.py</code>、<code data-page-node-id="bxbDq2ul4bDyGHiv1ENwsQ">_extract_gap.py</code> 与 <code data-page-node-id="Bds3QoKPqcmSd7gqlYwyCq">_patch_mappings.py</code>，把输出的 JSON 覆盖回 <code data-page-node-id="nKj2AnL1i6QsMfNtYgxcyo">index.html</code> 第一个 <code data-page-node-id="fKwkiTze19vgcTaS22G0uq">&lt;script&gt;</code> 块的对应常量。</p>
+  <h3 data-page-node-id="7DpeHLfojrFb05l1V6TiSA">回滚</h3>
+  <p data-page-node-id="XpPgF4EzFE10EoALUUDGX2">项目内保留备份文件 <code data-page-node-id="OD7GLamDS4mtx6AelUxApg">index_backup_20260830.html</code>。需要回滚时，用备份内容覆盖 <code data-page-node-id="YrQOSdZtHMIfomYzGmbCi0">index.html</code> 即可。</p>
+  <h3 data-page-node-id="RpU6tke0P4a6bt6C2Evn29">已知注意事项</h3>
+  <ul data-page-node-id="cj6jAMTCC13NA02MJESpSp">
+    <li data-page-node-id="xclDoZHEczpgsPhBRqLLPk">CDN 依赖（ECharts / SheetJS）需联网加载；离线时图表显示占位、上传解析禁用。</li>
+    <li data-page-node-id="WWD8iJbwu2qNTTAPr7niMT">核心函数 <code data-page-node-id="w5JutIrsYAPLGnoaoRjDMA">computeDetailRows</code> 及一批解析/映射/农历函数为金标准验证过的逻辑，<b data-page-node-id="OU24HcGAzVTlsJVLH0a6EP">禁止改动行为</b>，只能加注释。</li>
+    <li data-page-node-id="FidvoMfQVMBcGQxbz2JmWz">KPI 输入、预算日期等会写入 <code data-page-node-id="TCOUhDbVoNVFAhsjDYL6NC">localStorage</code>（key 如 <code data-page-node-id="tP9o7p1dT46cp5TZR9lPu7">injectionKpi</code>），测试时注意清空以免残留影响。</li>
+    <li data-page-node-id="5W69tmwspXtNxMxXCE0wS3">QA 脚本位于 <code data-page-node-id="mkU55syr67XW74hVPLU9hi">_qa_check/</code>，通过 <code data-page-node-id="7gbuCuEunAFSA59URHXAD1">window.__injectionDebug</code> 在 node vm 桩环境下调用，改动暴露接口前先检查这些脚本的引用。</li>
+  </ul>
+</section>
+
+<footer data-page-node-id="cQY2h3BJ8KRd48VBEWHkqm">惠州注塑部产能分析看板 · 项目说明文档 · 供团队复现、维护与增删模块使用</footer>
+</div>
+</body>
+</html>

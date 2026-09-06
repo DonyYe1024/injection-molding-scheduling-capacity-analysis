@@ -1,0 +1,12 @@
+2026/8/30 -1修改如下：
+
+
+改善1，月历模块metaCalendar，底色改为浅蓝浅绿渐变；
+
+改善2，在【header】class里找到一个【cal-spacer】class，aria-hidden=true，这个模块在正常视图里没有显示内容，作用是什么？不影响现有功能和外观的前提下删除该模块；
+
+改善3，【meta-gauge】class整体左移至靠近【meta-info】，【gauge-caption-note】和【metaGauge】居中对齐；
+
+改善4，【meta-info】字体加粗，字号加大2个字号；
+
+改善5，【header-top】框体长度跟随字符；让【meta-gauge】可以并排，我考虑的是将【header】上下宽度缩窄，稍微美观一些；
